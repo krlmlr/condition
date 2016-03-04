@@ -69,10 +69,10 @@ ConditionClassBase <- R6Class(
 
 #' Predefined condition classes
 #'
-#' Condition classes, with members \code{new} and \code{is}.
+#' Each object represents a condition class.
 #'
+#' @format R6 class, with members \code{new} and \code{is}.
 #' @seealso \code{\link{ConditionClass}}
-#'
 #' @export
 Condition <- ConditionClassBase$new()
 
