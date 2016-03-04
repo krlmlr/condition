@@ -13,3 +13,7 @@ URLNote: https://github.com/krlmlr/
 BugReports: https://github.com/krlmlr/
 URL: http://krlmlr.github.io/
 RoxygenNote: 5.0.1
+Collate:
+    'oo.R'
+    'is.R'
+    'new.R'
