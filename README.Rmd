@@ -16,7 +16,7 @@ Actually, there is `simpleCondition()`, `simpleError()` and the like,
 but they don't allow specifying an additional class.
 The functions in this package allow it:
 
-```
+```{r}
 library(condition)
 cond <- new_error("Something went wrong", class = "oops")
 cond
