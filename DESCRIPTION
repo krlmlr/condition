@@ -4,7 +4,7 @@ Version: 0.0-0
 Authors@R: person("Kirill", "Müller", role = c("aut", "cre"), email = "krlmlr+r@mailbox.org")
 Description: R has a condition system, but misses basic functions for creating
     condition objects and checking inheritance. (No, structure() and inherits()
-    doesn't count.) The functions and classes in this package allow the simple
+    don't count.) The functions and classes in this package allow the simple
     creation of custom condition objects and even the definition of own
     condition class hierarchies.
 Imports: R6
