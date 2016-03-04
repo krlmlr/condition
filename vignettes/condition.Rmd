@@ -45,5 +45,10 @@ Oops <- ConditionClass$new("oops", Error)
 oops <- Oops$new("Something went wrong")
 oops
 Oops$is(oops)
+```
+
+A custom condition object inherits from its base:
+
+```{r}
 Error$is(oops)
 ```
