@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>Index. condition 0.0-2</title>
+<title>Index. condition 0.0-3</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -32,7 +32,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">condition 0.0-2</a>
+      <a class="brand" href="#">condition 0.0-3</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -64,10 +64,18 @@
 
 <p>Actually, there is <code>simpleCondition()</code>, <code>simpleError()</code> and the like, but they don&#39;t allow specifying an additional class. The functions in this package allow it:</p>
 
-<pre><code>library(condition)
+<pre><code class="r">library(condition)
 cond &lt;- new_error(&quot;Something went wrong&quot;, class = &quot;oops&quot;)
 cond
-is.error(cond)
+</code></pre>
+
+<pre><code>## &lt;oops: Something went wrong&gt;
+</code></pre>
+
+<pre><code class="r">is.error(cond)
+</code></pre>
+
+<pre><code>## [1] TRUE
 </code></pre>
 
 <p>See <a href="http://krlmlr.github.io/condition/vignettes/condition.html">the vignette</a> for additional details.</p>
@@ -80,6 +88,9 @@ is.error(cond)
     
     <ul class="index">
         
+      <li>
+        <code><a href="condition-package.html">condition</a></code>(condition-package)<br />Create custom conditions</li>
+            
       <li>
         <code><a href="Condition.html">Condition</a></code>(Error, Message, SimpleCondition, SimpleError, SimpleMessage, SimpleWarning, Warning)<br />Predefined condition classes</li>
             

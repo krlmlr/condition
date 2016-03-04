@@ -2,9 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>is.condition. condition 0.0-3</title>
+<title>condition. condition 0.0-3</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="author" content="">
+<meta name="author" content="
+Kirill Müller
+">
 
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/bootstrap-responsive.css" rel="stylesheet">
@@ -48,40 +50,45 @@
         
       </header>
       
-      <h1>Check if the condition is of the appropriate type</h1>
+      <h1>Create custom conditions</h1>
 
 <div class="row">
   <div class="span8">
-    <h2>Usage</h2>
-    <pre><div>is.condition(x, ...)</div>
-<div>is.error(x, ...)</div>
-<div>is.warning(x, ...)</div>
-<div>is.message(x, ...)</div></pre>
-    
-    <h2>Arguments</h2>
-    <dl>
-      <dt>x</dt>
-      <dd>The object to check</dd>
-      <dt>...</dt>
-      <dd>Ignored</dd>
-    </dl>
-    
+        
     <div class="Description">
       <h2>Description</h2>
 
-      <p>Check if the condition is of the appropriate type</p>
+      <p>R has a condition system, but misses basic functions for
+creating condition objects and checking inheritance. (No,
+<code>structure()</code> and <code>inherits()</code> don't count.) The functions and
+classes in this package allow the simple creation of custom
+condition objects and even the definition of own condition
+class hierarchies.</p>
+  
+    </div>
+
+    <div class="Details">
+      <h2>Details</h2>
+
+      <p>See for example <code><a href='new_condition.html'>new_error</a></code>, or the corresponding R6 class
+<code><a href='Condition.html'>Error</a></code>.</p>
   
     </div>
       </div>
   <div class="span4">
     <!-- <ul>
-      <li>is.condition</li><li>is.error</li><li>is.message</li><li>is.warning</li>
+      <li>condition</li><li>condition-package</li>
     </ul>
     <ul>
       
     </ul> -->
       
-        
+    
+    <h2>Author</h2>
+    
+Kirill Müller
+
+    
   </div>
 </div>
       

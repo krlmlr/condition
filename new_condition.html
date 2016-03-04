@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>new_condition. condition 0.0-2</title>
+<title>new_condition. condition 0.0-3</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -32,7 +32,7 @@
     <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-      <a class="brand" href="#">condition 0.0-2</a>
+      <a class="brand" href="#">condition 0.0-3</a>
       <div class="nav">
         <ul class="nav">
           <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
@@ -65,17 +65,24 @@
       <dt>call</dt>
       <dd>call expression.</dd>
       <dt>class</dt>
-      <dd>The classes from which the condition should inherit, in addition
-to the default classes</dd>
+      <dd>the classes from which the condition should inherit, in addition
+to the default classes.</dd>
     </dl>
     
     <div class="Description">
       <h2>Description</h2>
 
-      <p>Create a condition</p>
+      <p>Allows the creation of basic and custom conditions, optionally overriding
+their class.</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>new_error(&quot;Something went wrong&quot;, class = &quot;oops&quot;)
+</div>
+<div class='output'>&lt;oops: Something went wrong&gt;
+</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
       <li>new_condition</li><li>new_error</li><li>new_message</li><li>new_warning</li>
