@@ -13,4 +13,4 @@ Actually, there is `simpleCondition()`, `simpleError()` and the like, but they d
     cond
     is.error(cond)
 
-See the vignette for additional details.
+See [the vignette](http://krlmlr.github.io/condition/vignettes/condition.html) for additional details.
