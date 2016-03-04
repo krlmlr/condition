@@ -7,7 +7,8 @@
 #' @examples
 #' Oops <- ConditionClass$new("oops", Error)
 #' Oops$new("Something went wrong")
-ConditionClass <- R6::R6Class(
+#' @importFrom R6 R6Class
+ConditionClass <- R6Class(
   "ConditionClass",
   cloneable = FALSE,
 
@@ -44,7 +45,7 @@ ConditionClass <- R6::R6Class(
   )
 )
 
-ConditionClassBase <- R6::R6Class(
+ConditionClassBase <- R6Class(
   "ConditionClassBase",
   inherit = ConditionClass,
   cloneable = FALSE,
@@ -102,6 +103,3 @@ Message <- ConditionClass$new("message", Condition)
 #' @rdname Condition
 #' @export
 SimpleMessage <- ConditionClass$new("simpleMessage", Message)
-
-# shut up R CMD check
-.silence_R6_note <- function() { R6::R6Class }
