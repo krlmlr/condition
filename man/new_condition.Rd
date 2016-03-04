@@ -2,9 +2,18 @@
 % Please edit documentation in R/new.R
 \name{new_condition}
 \alias{new_condition}
+\alias{new_error}
+\alias{new_message}
+\alias{new_warning}
 \title{Create a condition}
 \usage{
 new_condition(message, call = NULL, class = NULL)
+
+new_error(message, call = NULL, class = NULL)
+
+new_warning(message, call = NULL, class = NULL)
+
+new_message(message, call = NULL, class = NULL)
 }
 \arguments{
 \item{message}{character string.}

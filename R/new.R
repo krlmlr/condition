@@ -8,14 +8,14 @@ NULL
 #' @inheritParams base::simpleCondition
 new_condition <- Condition$new
 
-#' @rdname condition
+#' @rdname new_condition
 #' @export
 new_error <- Error$new
 
-#' @rdname condition
+#' @rdname new_condition
 #' @export
 new_warning <- Warning$new
 
-#' @rdname condition
+#' @rdname new_condition
 #' @export
 new_message <- Message$new
