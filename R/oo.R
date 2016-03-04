@@ -60,5 +60,8 @@ ConditionClassBase <- R6::R6Class(
 
 Condition <- ConditionClassBase$new()
 Error <- ConditionClass$new("error", Condition)
+SimpleError <- ConditionClass$new("simpleError", Error)
 Warning <- ConditionClass$new("warning", Condition)
+SimpleWarning <- ConditionClass$new("simpleWarning", Warning)
 Message <- ConditionClass$new("message", Condition)
+SimpleMessage <- ConditionClass$new("simpleMessage", Message)
