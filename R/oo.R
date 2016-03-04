@@ -1,4 +1,14 @@
-ConditionClass <- R6::R6Class(
+#' Generator class to create new condition classes
+#'
+#' Custom condition classes can be created with the help of this class.
+#'
+#' @keywords internal
+#' @export
+#' @examples
+#' Oops <- ConditionClass$new("oops", Error)
+#' Oops$new("Something went wrong")
+#' @importFrom R6 R6Class
+ConditionClass <- R6Class(
   "ConditionClass",
   cloneable = FALSE,
 
@@ -9,9 +19,8 @@ ConditionClass <- R6::R6Class(
 
       self$new <- eval(bquote(
         function(message, call = NULL, class = NULL) {
-          x <- self$parent$new(message = message, call = call, class = class)
-          class(x) <- unique(c(class, .(class_name), class(x)), fromLast = TRUE)
-          x
+          class <- unique(c(class, .(class_name)), fromLast = TRUE)
+          self$parent$new(message = message, call = call, class = class)
         }
       ))
 
@@ -36,7 +45,7 @@ ConditionClass <- R6::R6Class(
   )
 )
 
-ConditionClassBase <- R6::R6Class(
+ConditionClassBase <- R6Class(
   "ConditionClassBase",
   inherit = ConditionClass,
   cloneable = FALSE,
@@ -58,14 +67,39 @@ ConditionClassBase <- R6::R6Class(
   )
 )
 
+#' Predefined condition classes
+#'
+#' Condition classes, with members \code{new} and \code{is}.
+#'
+#' @seealso \code{\link{ConditionClass}}
+#'
+#' @export
 Condition <- ConditionClassBase$new()
-SimpleCondition <- ConditionClass$new("simpleCondition", Condition)
-Error <- ConditionClass$new("error", Condition)
-SimpleError <- ConditionClass$new("simpleError", Error)
-Warning <- ConditionClass$new("warning", Condition)
-SimpleWarning <- ConditionClass$new("simpleWarning", Warning)
-Message <- ConditionClass$new("message", Condition)
-SimpleMessage <- ConditionClass$new("simpleMessage", Message)
 
-# shut up R CMD check
-.silence_R6_note <- function() { R6::R6Class }
+#' @rdname Condition
+#' @export
+SimpleCondition <- ConditionClass$new("simpleCondition", Condition)
+
+#' @rdname Condition
+#' @export
+Error <- ConditionClass$new("error", Condition)
+
+#' @rdname Condition
+#' @export
+SimpleError <- ConditionClass$new("simpleError", Error)
+
+#' @rdname Condition
+#' @export
+Warning <- ConditionClass$new("warning", Condition)
+
+#' @rdname Condition
+#' @export
+SimpleWarning <- ConditionClass$new("simpleWarning", Warning)
+
+#' @rdname Condition
+#' @export
+Message <- ConditionClass$new("message", Condition)
+
+#' @rdname Condition
+#' @export
+SimpleMessage <- ConditionClass$new("simpleMessage", Message)

@@ -1,0 +1,54 @@
+---
+title: "Custom conditions"
+author: "Kirill Müller"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Custom conditions}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+> R doesn’t come with a built-in constructor function for conditions, but we can easily add one.
+>
+> (Advanced R, by Hadley Wickham)
+
+Actually, there is `simpleCondition()`, `simpleError()` and the like,
+but they don't allow specifying an additional class.
+The functions in this package allow it:
+
+```{r}
+library(condition)
+cond <- new_error("Something went wrong", class = "oops")
+cond
+is.error(cond)
+```
+
+Everything is powered by an R6 generator class that creates condition class
+objects:
+
+```{r}
+Condition
+Error
+```
+
+These condition objects can be used instead the plain functions:
+
+```{r}
+Error$new("Plain error")
+```
+
+If a custom condition is used more than once, it is a good idea to formalize it:
+
+```{r}
+Oops <- ConditionClass$new("oops", Error)
+oops <- Oops$new("Something went wrong")
+oops
+Oops$is(oops)
+```
+
+A custom condition object inherits from its base:
+
+```{r}
+Error$is(oops)
+```

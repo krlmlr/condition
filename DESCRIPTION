@@ -25,4 +25,7 @@ Collate:
     'new.R'
     'zzz-autoroxy.R'
 Suggests:
-    testthat
+    testthat,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr

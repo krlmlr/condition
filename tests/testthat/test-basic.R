@@ -24,7 +24,5 @@ test_that("Construction and type checking", {
   expect_false(is.warning(msg))
 
   oops <- new_error("oops", class = "oops")
-  expect_is(oops, "oops")
-  expect_is(oops, "error")
-  expect_is(oops, "condition")
+  expect_identical(class(oops), c("oops", "error", "condition"))
 })

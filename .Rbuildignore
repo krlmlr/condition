@@ -7,3 +7,5 @@
 ^_builds$
 ^_projects$
 ^_steps$
+^README\.Rmd$
+^README-.*\.png$
