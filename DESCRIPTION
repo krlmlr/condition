@@ -24,7 +24,6 @@ Collate:
     'oo.R'
     'is.R'
     'new.R'
-    'zzz-autoroxy.R'
 Suggests:
     testthat,
     knitr,
