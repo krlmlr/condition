@@ -13,4 +13,5 @@
 #' @author Kirill Müller
 #' @name condition
 #' @docType package
+#' @rdname condition-package
 NULL

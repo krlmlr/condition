@@ -8,9 +8,18 @@ condition [![wercker status](https://app.wercker.com/status/bbb06a481e37da1ba165
 
 Actually, there is `simpleCondition()`, `simpleError()` and the like, but they don't allow specifying an additional class. The functions in this package allow it:
 
-    library(condition)
-    cond <- new_error("Something went wrong", class = "oops")
-    cond
-    is.error(cond)
+``` r
+library(condition)
+cond <- new_error("Something went wrong", class = "oops")
+cond
+```
+
+    ## <oops: Something went wrong>
+
+``` r
+is.error(cond)
+```
+
+    ## [1] TRUE
 
 See [the vignette](http://krlmlr.github.io/condition/vignettes/condition.html) for additional details.
