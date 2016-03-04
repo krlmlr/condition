@@ -9,9 +9,8 @@ ConditionClass <- R6::R6Class(
 
       self$new <- eval(bquote(
         function(message, call = NULL, class = NULL) {
-          x <- self$parent$new(message = message, call = call, class = class)
-          class(x) <- unique(c(class, .(class_name), class(x)), fromLast = TRUE)
-          x
+          class <- unique(c(class, .(class_name)), fromLast = TRUE)
+          self$parent$new(message = message, call = call, class = class)
         }
       ))
 
