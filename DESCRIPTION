@@ -20,4 +20,7 @@ Collate:
     'oo.R'
     'is.R'
     'new.R'
-Suggests: testthat
+Suggests: testthat,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
