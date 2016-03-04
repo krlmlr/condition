@@ -16,3 +16,4 @@ Collate:
     'oo.R'
     'is.R'
     'new.R'
+Suggests: testthat
