@@ -4,7 +4,7 @@
 #'
 #' @keywords internal
 #' @export
-#' @example
+#' @examples
 #' Oops <- ConditionClass$new("oops", Error)
 #' Oops$new("Something went wrong")
 ConditionClass <- R6::R6Class(
