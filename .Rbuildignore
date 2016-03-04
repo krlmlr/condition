@@ -1,2 +1,9 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^Makefile$
+^Makefile\.in$
+^makeR$
+^wercker\.yml$
+^_builds$
+^_projects$
+^_steps$

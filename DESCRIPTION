@@ -1,13 +1,16 @@
 Package: condition
 Title: Functions to Create and Check Condition Objects
-Version: 0.0-0
-Authors@R: person("Kirill", "Müller", role = c("aut", "cre"), email = "krlmlr+r@mailbox.org")
-Description: R has a condition system, but misses basic functions for creating
-    condition objects and checking inheritance. (No, structure() and inherits()
-    doesn't count.) The functions and classes in this package allow the simple
-    creation of custom condition objects and even the definition of own
-    condition class hierarchies.
-Imports: R6
+Version: 0.0-1
+Authors@R: person("Kirill", "Müller", role = c("aut", "cre"), email =
+        "krlmlr+r@mailbox.org")
+Description: R has a condition system, but misses basic functions for
+    creating condition objects and checking inheritance. (No,
+    structure() and inherits() don't count.) The functions and
+    classes in this package allow the simple creation of custom
+    condition objects and even the definition of own condition
+    class hierarchies.
+Imports:
+    R6
 License: GPL-3
 LazyData: true
 Encoding: UTF-8
@@ -20,4 +23,5 @@ Collate:
     'oo.R'
     'is.R'
     'new.R'
-Suggests: testthat
+Suggests:
+    testthat
