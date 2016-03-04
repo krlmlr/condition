@@ -23,3 +23,26 @@ cond <- new_error("Something went wrong", class = "oops")
 cond
 is.error(cond)
 ```
+
+Everything is powered by an R6 generator class that creates condition class
+objects:
+
+```{r}
+Condition
+Error
+```
+
+These condition objects can be used instead the plain functions:
+
+```{r}
+Error$new("Plain error")
+```
+
+If a custom condition is used more than once, it is a good idea to formalize it:
+
+```{r}
+Oops <- ConditionClass$new("oops", Error)
+oops <- Oops$new("Something went wrong")
+oops
+Oops$is(oops)
+```

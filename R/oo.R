@@ -1,3 +1,12 @@
+#' Generator class to create new condition classes
+#'
+#' Custom condition classes can be created with the help of this class.
+#'
+#' @keywords internal
+#' @export
+#' @example
+#' Oops <- ConditionClass$new("oops", Error)
+#' Oops$new("Something went wrong")
 ConditionClass <- R6::R6Class(
   "ConditionClass",
   cloneable = FALSE,
@@ -57,13 +66,41 @@ ConditionClassBase <- R6::R6Class(
   )
 )
 
+#' Predefined condition classes
+#'
+#' Condition classes, with members \code{new} and \code{is}.
+#'
+#' @seealso \code{\link{ConditionClass}}
+#'
+#' @export
 Condition <- ConditionClassBase$new()
+
+#' @rdname Condition
+#' @export
 SimpleCondition <- ConditionClass$new("simpleCondition", Condition)
+
+#' @rdname Condition
+#' @export
 Error <- ConditionClass$new("error", Condition)
+
+#' @rdname Condition
+#' @export
 SimpleError <- ConditionClass$new("simpleError", Error)
+
+#' @rdname Condition
+#' @export
 Warning <- ConditionClass$new("warning", Condition)
+
+#' @rdname Condition
+#' @export
 SimpleWarning <- ConditionClass$new("simpleWarning", Warning)
+
+#' @rdname Condition
+#' @export
 Message <- ConditionClass$new("message", Condition)
+
+#' @rdname Condition
+#' @export
 SimpleMessage <- ConditionClass$new("simpleMessage", Message)
 
 # shut up R CMD check
