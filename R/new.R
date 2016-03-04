@@ -2,7 +2,7 @@
 #' @export
 #' @param class The classes from which the condition should inherit, in addition
 #'   to the default classes
-#' @inheritParams simpleCondition
+#' @inheritParams base::simpleCondition
 new_condition <- function(message, call = NULL, class = NULL) {
   class <- unique(c(class, "condition"), fromLast = TRUE)
   structure(list(message = as.character(message), call = call),
