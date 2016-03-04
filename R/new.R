@@ -2,10 +2,16 @@
 NULL
 
 #' Create a condition
+#'
+#' Allows the creation of basic and custom conditions, optionally overriding
+#' their class.
+#'
 #' @export
-#' @param class The classes from which the condition should inherit, in addition
-#'   to the default classes
+#' @param class the classes from which the condition should inherit, in addition
+#'   to the default classes.
 #' @inheritParams base::simpleCondition
+#' @examples
+#' new_error("Something went wrong", class = "oops")
 new_condition <- Condition$new
 
 #' @rdname new_condition

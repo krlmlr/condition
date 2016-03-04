@@ -20,6 +20,7 @@ BugReports: https://github.com/krlmlr/condition/issues
 URL: http://krlmlr.github.io/condition
 RoxygenNote: 5.0.1
 Collate:
+    'condition-package.r'
     'oo.R'
     'is.R'
     'new.R'
