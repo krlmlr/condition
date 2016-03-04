@@ -11,7 +11,7 @@
 \alias{SimpleWarning}
 \alias{Warning}
 \title{Predefined condition classes}
-\format{An object of class \code{ConditionClassBase} (inherits from \code{ConditionClass}, \code{R6}) of length 7.}
+\format{R6 class, with members \code{new} and \code{is}.}
 \usage{
 Condition
 
@@ -30,7 +30,7 @@ Message
 SimpleMessage
 }
 \description{
-Condition classes, with members \code{new} and \code{is}.
+Each object represents a condition class.
 }
 \seealso{
 \code{\link{ConditionClass}}

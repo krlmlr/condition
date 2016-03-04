@@ -1,6 +1,6 @@
 Package: condition
 Title: Functions to Create and Check Condition Objects
-Version: 0.0-2
+Version: 0.0-3
 Authors@R: person("Kirill", "Müller", role = c("aut", "cre"), email =
         "krlmlr+r@mailbox.org")
 Description: R has a condition system, but misses basic functions for
@@ -20,6 +20,7 @@ BugReports: https://github.com/krlmlr/condition/issues
 URL: http://krlmlr.github.io/condition
 RoxygenNote: 5.0.1
 Collate:
+    'condition-package.r'
     'oo.R'
     'is.R'
     'new.R'

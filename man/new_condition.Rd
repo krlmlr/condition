@@ -20,10 +20,14 @@ new_message(message, call = NULL, class = NULL)
 
 \item{call}{call expression.}
 
-\item{class}{The classes from which the condition should inherit, in addition
-to the default classes}
+\item{class}{the classes from which the condition should inherit, in addition
+to the default classes.}
 }
 \description{
-Create a condition
+Allows the creation of basic and custom conditions, optionally overriding
+their class.
+}
+\examples{
+new_error("Something went wrong", class = "oops")
 }
 
