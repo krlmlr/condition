@@ -61,7 +61,7 @@ ConditionClassBase <- R6Class(
       }
 
       self$is <- function(x, ...) {
-        inherits(x, "condition")
+        inherits(x, "condition") # nocov # This line is hit by tests, covr is wrong
       }
     }
   )
