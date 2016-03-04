@@ -65,3 +65,6 @@ Warning <- ConditionClass$new("warning", Condition)
 SimpleWarning <- ConditionClass$new("simpleWarning", Warning)
 Message <- ConditionClass$new("message", Condition)
 SimpleMessage <- ConditionClass$new("simpleMessage", Message)
+
+# shut up R CMD check
+.silence_R6_note <- function() { R6::R6Class }
