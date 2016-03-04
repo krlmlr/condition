@@ -1,6 +1,6 @@
 Package: condition
 Title: Functions to Create and Check Condition Objects
-Version: 0.0-1
+Version: 0.0-2
 Authors@R: person("Kirill", "Müller", role = c("aut", "cre"), email =
         "krlmlr+r@mailbox.org")
 Description: R has a condition system, but misses basic functions for
@@ -24,4 +24,7 @@ Collate:
     'is.R'
     'new.R'
 Suggests:
-    testthat
+    testthat,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
